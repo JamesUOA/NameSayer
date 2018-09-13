@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #2C3E50;" stylesheets="@nameSayerTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayer.ControllerCreateCreations">
+   <children>
+      <AnchorPane prefHeight="637.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="_recordButton" layoutX="829.0" layoutY="537.0" mnemonicParsing="false" onAction="#recordButtonPressed" prefHeight="25.0" prefWidth="190.0" styleClass="buttonsStyle" text="Record" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="337.0" fitWidth="337.0" layoutX="756.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Microphone.jpg" />
+               </image></ImageView>
+            <Label fx:id="_status" alignment="CENTER" layoutX="938.0" layoutY="466.0" text="Idle" textFill="#ae0202">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="788.0" layoutY="466.0" text="Status:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="_preview" layoutX="47.0" layoutY="537.0" mnemonicParsing="false" onAction="#previewPressed" prefHeight="25.0" prefWidth="190.0" styleClass="buttonsStyle" text="Preview" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="_Redo" layoutX="257.0" layoutY="537.0" mnemonicParsing="false" onAction="#RedoPressed" prefHeight="25.0" prefWidth="190.0" styleClass="buttonsStyle" text="Redo" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="_delete" layoutX="470.0" layoutY="537.0" mnemonicParsing="false" onAction="#deletePressed" prefHeight="25.0" prefWidth="190.0" styleClass="buttonsStyle" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ProgressIndicator fx:id="_indicator" layoutX="734.0" layoutY="473.0" prefHeight="39.0" prefWidth="52.0">
+               <styleClass>
+                  <String fx:value="fillIndicator-inner-circle" />
+                  <String fx:value="ringIndicator-outer-circle-secondary" />
+                  <String fx:value="ringIndicator" />
+                  <String fx:value="indeterminate" />
+                  <String fx:value="fillIndicator-filler" />
+               </styleClass></ProgressIndicator>
+            <MediaView fx:id="mv" fitHeight="400.0" fitWidth="600.0" layoutX="56.0" layoutY="99.0" />
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="112.0" prefWidth="1280.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="1280.0" spacing="30.0">
+               <children>
+                  <Label text="Enter Name:" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="_fullName" prefHeight="31.0" prefWidth="368.0" promptText="Full name" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="149.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="_mainMenu" mnemonicParsing="false" onAction="#menuButtonPressed" prefHeight="53.0" prefWidth="416.0" style="-fx-background-color: #2C3E50;" text="&lt; Main menu" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="-30.0" left="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="200.0" />
+               </padding>
+            </Button>
+            <Button fx:id="_createNew" mnemonicParsing="false" onAction="#createNewPressed" prefHeight="97.0" prefWidth="489.0" styleClass="buttonsStyle" text="Create New" textFill="WHITE">
+               <font>
+                  <Font size="37.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="40.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

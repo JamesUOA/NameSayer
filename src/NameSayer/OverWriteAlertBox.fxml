@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #2C3E50;" stylesheets="@nameSayerTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayer.OverWriteAlertBoxC">
+   <center>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="_messageL1" text="Text Line 1" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="_messageL2" text="TextLine2" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="_yes" minWidth="100.0" mnemonicParsing="false" onAction="#_yesButtonPressed" styleClass="buttonsStyle" text="Yes" textFill="WHITE" />
+            <Button fx:id="_no" minWidth="100.0" mnemonicParsing="false" onAction="#_noButtonPressed" text="No" textFill="WHITE" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
