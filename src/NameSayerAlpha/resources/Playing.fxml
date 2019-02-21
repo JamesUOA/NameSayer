@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="653.0" prefWidth="1216.0" style="-fx-background-color: black;" styleClass="borderPane-2" stylesheets="@../themes/MainScenes.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.PlayingController">
+   <top>
+      <VBox prefHeight="260.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="101.0" prefWidth="1176.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="293.0" text="Welcome" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="874.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="158.0" prefWidth="1216.0" spacing="40.0">
+               <children>
+                  <Label fx:id="firstCharacter" alignment="CENTER" contentDisplay="CENTER" prefHeight="115.0" prefWidth="115.0" style="-fx-border-color: white;" text="C" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="70.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <VBox prefHeight="158.0" prefWidth="982.0">
+                     <children>
+                        <Label fx:id="playListName" prefHeight="49.0" prefWidth="986.0" text="Please select a playlist" textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="currentNameLabel" prefHeight="39.0" prefWidth="958.0" text="Current Name" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <JFXButton onAction="#playAll" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #3c87ee;" text="Play all" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <JFXListView fx:id="playList" onMouseClicked="#itemSelected" prefHeight="459.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="40.0" right="40.0" />
+         </BorderPane.margin></JFXListView>
+   </center>
+</BorderPane>

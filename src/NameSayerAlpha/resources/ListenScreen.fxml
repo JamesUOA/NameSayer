@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1216.0" style="-fx-background-color: black;" styleClass="borderPane-2" stylesheets="@../themes/MainScenes.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.ListenScreenController">
+    <top>
+        <VBox prefHeight="170.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="1176.0">
+                    <children>
+                        <Label text="Browse" textFill="WHITE">
+                            <font>
+                                <Font name="Roboto Thin" size="60.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <Separator prefWidth="200.0" />
+            <Label alignment="BOTTOM_LEFT" prefHeight="66.0" prefWidth="418.0" text="Create playlist" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox prefHeight="83.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="1216.0" spacing="20.0">
+                    <children>
+                        <TextField fx:id="searchField" onKeyTyped="#textChanged" prefHeight="26.0" prefWidth="639.0" promptText="Search">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                  </TextField>
+                        <JFXButton onAction="#addToPlaylist" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #3c87ee;" text="Add to playlist" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></JFXButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="40.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="416.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXListView fx:id="listView" prefHeight="416.0" prefWidth="637.0">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="40.0" />
+               </HBox.margin>
+            </JFXListView>
+            <VBox prefHeight="416.0" prefWidth="69.0" />
+            <VBox prefHeight="200.0" prefWidth="375.0">
+               <children>
+                  <JFXListView fx:id="playList" onMouseClicked="#playlistPressed" prefHeight="380.0" prefWidth="375.0" />
+                  <TextField fx:id="playListName" prefHeight="26.0" prefWidth="246.0" promptText="Playlist Name">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin></TextField>
+                  <HBox prefHeight="27.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <JFXButton onAction="#savePlaylist" prefHeight="47.0" prefWidth="125.0" style="-fx-background-color: #3c87ee;" text="Save Playlist" textFill="WHITE" />
+                        <JFXButton onAction="#removePressed" prefHeight="47.0" prefWidth="125.0" style="-fx-background-color: #3c87ee;" text="Remove" textFill="WHITE" />
+                        <JFXButton onAction="#clearPressed" prefHeight="47.0" prefWidth="125.0" style="-fx-background-color: #3c87ee;" text="Clear" textFill="WHITE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+    </bottom>
+</BorderPane>

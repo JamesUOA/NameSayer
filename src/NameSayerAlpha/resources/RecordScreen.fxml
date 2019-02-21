@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1216.0" style="-fx-background-color: black;" styleClass="borderPane-2" stylesheets="@../themes/MainScenes.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.RecordScreenController">
+   <top>
+      <VBox prefHeight="150.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="badQualitybutton" alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="1176.0">
+               <children>
+                  <Label text="Record" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Thin" size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="506.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="280.0" prefWidth="435.0">
+               <children>
+                  <Label text="Current Playlist" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Roboto Thin" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXListView fx:id="playlistNames" onMouseClicked="#onNameSelect" prefHeight="455.0" prefWidth="375.0">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </JFXListView>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="435.0" prefWidth="347.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="94.0" prefWidth="347.0" spacing="10.0" style="-fx-background-color: #112943; -fx-opacity: 0.9;">
+                     <children>
+                        <Label alignment="CENTER" text="Selected Name:" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="selectedName" prefHeight="26.0" prefWidth="157.0" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="158.0" prefWidth="347.0" spacing="20.0" style="-fx-background-color: #112943; -fx-opacity: 0.9;">
+                     <children>
+                        <Label text="Record: " textFill="WHITE">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="recordButton" alignment="CENTER" contentDisplay="CENTER" onAction="#recordButtonClicked" prefHeight="45.0" prefWidth="45.0" ripplerFill="WHITE" text=" ">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/startRecording.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #112943; -fx-opacity: 0.9;">
+                     <children>
+                        <Label text="Status: " textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="recordingLabel" text="Idle " textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="347.0" spacing="10.0" style="-fx-background-color: #112943; -fx-opacity: 0.9;">
+                     <children>
+                        <ImageView fitHeight="37.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@staticIcons/microphone.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ProgressBar fx:id="micLevel" prefHeight="20.0" prefWidth="252.0" progress="0.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="347.0" spacing="20.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton onAction="#deleteRecording" prefHeight="33.0" prefWidth="347.0" style="-fx-background-color: #3c87ee;" text="Delete Recording" textFill="WHITE" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="280.0" prefWidth="435.0">
+               <children>
+                  <Label text="Local Recordings" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Roboto Thin" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXListView fx:id="localNames" onMouseClicked="#onCustomName" prefHeight="476.0" prefWidth="375.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </JFXListView>
+               </children>
+            </VBox>
+         </children></HBox>
+   </bottom>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

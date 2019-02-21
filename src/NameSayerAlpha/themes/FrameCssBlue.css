@@ -1,0 +1,7 @@
+.jfx-tab-pane .tab-header-background { -fx-background-color: #01192F;}
+.tab *.tab-label {
+    -fx-rotate: 90;
+}
+.darkestBox{
+    -fx-background-color: #112943;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="border" stylesheets="@../themes/MainMenuTheme.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.LoadingController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="355.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="768.0" prefWidth="464.0">
+               <children>
+                  <ProgressIndicator prefHeight="265.0" prefWidth="464.0">
+                     <VBox.margin>
+                        <Insets top="200.0" />
+                     </VBox.margin>
+                  </ProgressIndicator>
+                  <Label alignment="TOP_CENTER" prefHeight="9.0" prefWidth="464.0" text="Loading" textFill="WHITE">
+                     <font>
+                        <Font size="58.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="task" alignment="TOP_CENTER" prefHeight="13.0" prefWidth="464.0" text="doing this" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="file" alignment="TOP_CENTER" prefHeight="105.0" prefWidth="464.0" text="file" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

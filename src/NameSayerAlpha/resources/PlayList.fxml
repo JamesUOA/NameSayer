@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="1216.0" style="-fx-background-color: black;" styleClass="borderPane-2" stylesheets="@../themes/MainScenes.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.PlaylistController">
+   <top>
+      <VBox prefHeight="150.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="101.0" prefWidth="1176.0">
+               <children>
+                  <Label text="Manage Playlists" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Thin" size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="83.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="1216.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="616.0" prefWidth="1216.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="380.0" prefWidth="899.0">
+               <children>
+                  <VBox prefHeight="380.0" prefWidth="890.0">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="890.0">
+                           <children>
+                              <Label prefHeight="49.0" prefWidth="404.0" text="Playlists" textFill="WHITE">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="49.0" prefWidth="204.0" text="Contents" textFill="WHITE">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="455.0" prefWidth="890.0" spacing="30.0">
+                           <children>
+                              <JFXListView fx:id="playlists" onMouseClicked="#onPlaylistSelect" prefHeight="421.0" prefWidth="893.0">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </JFXListView>
+                              <JFXListView fx:id="contentsList" onMouseClicked="#onNameSelect" prefHeight="331.0" prefWidth="865.0">
+                                 <HBox.margin>
+                                    <Insets right="40.0" />
+                                 </HBox.margin>
+                              </JFXListView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="850.0" spacing="10.0">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton onAction="#deletePlaylist" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3c87ee;" text="Delete" textFill="WHITE" />
+                              <JFXButton onAction="#clearPlaylist" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #3c87ee;" text="Clear" textFill="WHITE" />
+                           </children></HBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+               </children>
+            </HBox>
+            <VBox prefHeight="380.0" prefWidth="317.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="317.0">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="311.0" text="Upload" textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="uploadButton" onAction="#uploadButtonPressed" prefHeight="359.0" prefWidth="297.0" style="-fx-background-color: #112943; -fx-opacity: 0.9; -fx-border-radius: 100; -fx-background-radius: 20;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@staticIcons/if_Folder_2202274.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

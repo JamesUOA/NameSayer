@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="border" stylesheets="@../themes/MainMenuTheme.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NameSayerAlpha.MainMenuController">
+   <bottom>
+      <VBox alignment="TOP_CENTER" prefHeight="461.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="112.0" prefWidth="1366.0">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="180.0" styleClass="title-Light" text="Name: " textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Thin" size="48.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textField" focusColor="#4388ff" maxWidth="447.0" minWidth="30.0" prefHeight="48.0" prefWidth="396.0" promptText="E.g. James Zhang" styleClass="title-Light1" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto Light" size="30.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="131.0" prefWidth="1366.0" spacing="40.0">
+               <children>
+                  <JFXButton fx:id="login" onAction="#loginButtonPressed" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #112943; -fx-border-color: #ffffff;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Light" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="guest" onAction="#guestButtonPressed" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #bebebe; -fx-border-color: #ffffff;" text="Guest" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Light" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton fx:id="exit" onAction="#exitButtonPressed" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #112943; -fx-border-color: #ffffff;" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="1366.0" styleClass="border">
+               <children>
+                  <Label text="Welcome to" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Light" size="60.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <Label prefHeight="87.0" prefWidth="448.0" styleClass="title-thin" text="Name Sayer" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="72.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

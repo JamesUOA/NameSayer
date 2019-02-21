@@ -1,0 +1,49 @@
+.list-view .list-cell:even {
+    -fx-background-color: transparent/*#112943*/;
+    -fx-text-fill: white;
+}
+.list-view .list-cell:odd {
+    -fx-background-color: #112943/*#021c35*/;
+    -fx-text-fill: white;
+}
+
+.list-view{
+
+    -fx-background-color: #112943;
+    -fx-border-color: #112943;
+    -fx-opacity: 0.9;
+
+    /*
+    -fx-background-color: #021c35;
+    -fx-border-color: #021c35;
+    */
+}
+
+
+.list-view:focused .list-cell:focused {
+    -fx-background-color: #213f68;
+}
+
+.borderPane-1{
+     /*image from: https://www.google.co.nz/search?q=cityscape+photography&rlz=1C1SQJL_enNZ789NZ789&tbs=isz:lt,islt:xga&tbm=isch&source=lnt&sa=X&ved=0ahUKEwiux5267vXdAhXTdd4KHS0XDugQpwUIHw&biw=1916&bih=918&dpr=1#imgrc=4-42xqpBapcU_M:*/
+     -fx-background-image: url("/NameSayerAlpha/resources/backgroundImages/Background.jpg");
+     -fx-background-repeat: no-repeat;
+ }
+
+.borderPane-2{
+    /*image from: https://www.google.co.nz/search?q=cityscape+photography&rlz=1C1SQJL_enNZ789NZ789&tbs=isz:lt,islt:xga&tbm=isch&source=lnt&sa=X&ved=0ahUKEwiux5267vXdAhXTdd4KHS0XDugQpwUIHw&biw=1916&bih=918&dpr=1#imgrc=4-42xqpBapcU_M:*/
+    -fx-background-image: url("/NameSayerAlpha/resources/backgroundImages/Background2.jpg");
+    -fx-background-repeat: no-repeat;
+
+}
+
+.borderPane-3{
+    /*image from: https://www.google.co.nz/search?q=cityscape+photography&rlz=1C1SQJL_enNZ789NZ789&tbs=isz:lt,islt:xga&tbm=isch&source=lnt&sa=X&ved=0ahUKEwiux5267vXdAhXTdd4KHS0XDugQpwUIHw&biw=1916&bih=918&dpr=1#imgrc=4-42xqpBapcU_M:*/
+    -fx-background-image: url("/NameSayerAlpha/resources/backgroundImages/Background3.jpg");
+    -fx-background-repeat: no-repeat;
+
+}
+
+.jfx-progress-bar > .track {
+    -fx-background-color: #E0E0E0;
+}
