@@ -6,5 +6,5 @@ can learn to pronounce names from a library, and then also add their own name to
  ![main screen](mainscreen.JPG)
  ![browse](browse.JPG)
 
-Project was done with my project partner Rylan Lim awesome guy to work with, check out his github:
+Project was done with my project partner Ryan Lim awesome guy to work with, check out his github:
 https://github.com/pabloSushibar
